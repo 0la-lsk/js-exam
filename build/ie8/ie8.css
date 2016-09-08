@@ -242,6 +242,12 @@ h2.title {
   text-align: center; }
   .partners h2.title {
     padding-bottom: 35px; }
+
+  .partners a.profile {
+    display: inline-block; }
+  .partners a.profile, .partners a.profile:visited, .partners a.profile:hover {
+    text-decoration: none;
+    color: #000; }    
   .partners .partner--item {
     text-align: center;
     padding-bottom: 50px; }

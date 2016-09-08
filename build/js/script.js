@@ -40,12 +40,20 @@ var grid = document.querySelector('.grid');
 
 var msnry = new Masonry( grid, {
   itemSelector: '.grid-item',
-  columnWidth: 33.333,
-  gutter: 20,
+  columnWidth: '.grid-sizer',
+  isAnimated: true,
+  animationOptions: { 
+  	duration: 500
+  },
   percentPosition: true
 });
 
-imagesLoaded( grid ).on( 'progress', function() {
+// imagesLoaded( grid ).on( 'progress', function() {
+//   msnry.layout();
+// });
+
+imagesLoaded( grid, function() {
+  msnry = new Masonry( grid );
   msnry.layout();
 });
 

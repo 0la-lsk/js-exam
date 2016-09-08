@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>js exam</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -13,7 +14,7 @@
 	<!--[if !IE]><!-->
 	<script src="js/templates.js"></script>
 	<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.js"></script>
 	<link rel="stylesheet" href="css/styles.css">
 	<!--<![endif]-->
 
@@ -116,32 +117,32 @@
 		<h2 class="title">Meet a partner for your best holiday</h2>
 		<div class="rows">
 			<div class="col-big-4 col-med-2 col-small-1 col-mob-1 partner--item">
-				<div>
+				<a href="" class="profile">
 					<div class="partner--item__img"><span>&#xe800;</span></div>
 					<h3>Bradley Hunter</h3>
 					<p>Based in Chicago. I love playing tennis and loud music.</p>
-				</div>
+				</a>
 			</div>
 			<div class="col-big-4 col-med-2 col-small-1 col-mob-1 partner--item">
-				<div>
+				<a href="" class="profile">
 					<div class="partner--item__img"><span>&#xe801;</span></div>
 					<h3>Heather Walker</h3>
 					<p>I'm a happy person that loves cats and climbing on mountains.</p>
-				</div>
+				</a>
 			</div>
 			<div class="col-big-4 col-med-2 col-small-1 col-mob-1 partner--item">
-				<div>
+				<a href="" class="profile">
 					<div class="partner--item__img"><span>&#xe803;</span></div>
 					<h3>Lucas Marsha</h3>
 					<p>I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards.</p>
-				</div>
+				</a>
 			</div>
 			<div class="col-big-4 col-med-2 col-small-1 col-mob-1 partner--item">
-				<div>
+				<a href="" class="profile">
 					<div class="partner--item__img"><span>&#xe805;</span></div>
 					<h3>Bradley Hunter</h3>
 					<p>Based in Chicago. I love playing tennis and loud music.</p>
-				</div>
+				</a>
 			</div>
 		</div>
 		<div class="rows">
@@ -157,38 +158,38 @@
 			<div class="grid" id="mygrid">
 				<div class="grid-sizer"></div>
 				<script type="text/html" id="tmpl-img">
-					<div class="grid-item col-big-3 col-med-3 col-small-1 col-mob-1">
+					<!-- <div class="grid-item col-big-3 col-med-3 col-small-1 col-mob-1"> -->
+					<div class="grid-item">
 						<div class="img" style="background:url(<%= datas.images[0].imageurl %>)"></div>
 						<p><%= datas.images[0].word %></p>
 					</div>
-					<div class="grid-item col-big-3 col-med-3 col-small-1 col-mob-1">
+					<div class="grid-item">
 						<div class="img" style="background:url(<%= datas.images[1].imageurl %>)"></div>
 						<p><%= datas.images[1].word %></p>
 					</div>
-					<div class="grid-item col-big-3 col-med-3 col-small-1 col-mob-1">
+					<div class="grid-item">
 						<div class="img" style="background:url(<%= datas.images[2].imageurl %>)"></div>
 						<p><%= datas.images[2].word %></p>
 					</div>
-					<div class="grid-item col-big-3 col-med-3 col-small-1 col-mob-1">
+					<div class="grid-item">
 						<div class="img" style="background:url(<%= datas.images[3].imageurl %>)"></div>
 						<p><%= datas.images[3].word %></p>
 					</div>
-					<div class="grid-item grid-item-width2 col-big-3 col-med-3 col-small-1 col-mob-1">
+					<div class="grid-item grid-item-width2">
 						<div class="img" style="background:url(<%= datas.images[4].imageurl %>)"></div>
 						<p><%= datas.images[4].word %></p>
 					</div>
-					<div class="grid-item grid-item-width2 col-big-3 col-med-3 col-small-1 col-mob-1">
+					<div class="grid-item grid-item-width2">
 						<div class="img" style="background:url(<%= datas.images[5].imageurl %>)"></div>
 						<p><%= datas.images[5].word %></p>
 					</div>
-					<div class="grid-item col-big-3 col-med-3 col-small-1 col-mob-1">
+					<div class="grid-item">
 						<div class="img" style="background:url(<%= datas.images[6].imageurl %>)"></div>
 						<p><%= datas.images[6].word %></p>
 					</div>
 				</script>
 
 
-						
 			</div>
 
 		</div>
@@ -205,8 +206,6 @@
                     <img class="img" src="<%=images[i].imageurl%>" alt="" />
                     <p><%= images[i].word %></p>
                 </div>
-
-
              <% } %>
          </script>
      </div>
@@ -228,10 +227,10 @@
 <footer>
 	<div class="wrapper">
 	<div class="rows">
-		<div class="col-big-4 col-med-4 col-small-4 col-mob-1">
+		<div class="col-big-4 col-med-4 col-small-1 col-mob-1">
 			<a href=""><img src="img/footer-logo.png" alt=""></a>
 		</div>
-		<div class="col-big-6 col-med-6 col-small-6 col-mob-1">
+		<div class="col-big-6 col-med-6 col-small-1 col-mob-1">
 			<h5>Company</h5>
 			<nav>
 				<ul>
@@ -242,8 +241,8 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="col-big-3 col-med-3 col-small-3 col-mob-1"><h5>Partners</h5></div>
-		<div class="col-big-7 col-med-7 col-small-7 col-mob-1 right">
+		<div class="col-big-3 col-med-3 col-small-1 col-mob-1"><h5>Partners</h5></div>
+		<div class="col-big-7 col-med-7 col-small-1 col-mob-1 right">
 			<a href=""><img src="img/partner-logo.png" alt=""></a>
 		</div>
 	</div>

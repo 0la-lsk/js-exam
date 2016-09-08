@@ -227,6 +227,11 @@ h2.title {
   text-align: center; }
   .partners h2.title {
     padding-bottom: 35px; }
+  .partners a.profile {
+    display: inline-block; }
+  .partners a.profile, .partners a.profile:visited, .partners a.profile:hover {
+    text-decoration: none;
+    color: #000; }
   .partners .partner--item {
     text-align: center;
     padding-bottom: 50px; }
@@ -293,42 +298,53 @@ h2.title {
   padding-top: 100px; }
   .images h2 {
     padding-bottom: 40px; }
-  .images .grid:after {
-    content: '';
+
+.item {
+  float: left;
+  position: relative; }
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.grid-item {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  float: left;
+  border-radius: 10px; }
+  .grid-item .img {
+    width: 310px;
+    height: 310px;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center 20% !important; }
+  .grid-item:nth-of-type(5) .img,
+  .grid-item:nth-of-type(6) .img {
+    width: 620px; }
+  .grid-item img {
     display: block;
-    clear: both; }
-  .images .grid-sizer, .images .grid-item {
-    width: 33.333%; }
-  .images .grid-item-width2 {
-    width: 66.666%; }
-  .images .grid-item {
-    position: relative;
-    padding: 0;
-    overflow: hidden;
-    float: left;
-    border-radius: 10px; }
-    .images .grid-item .img {
-      max-width: 100%;
-      min-height: 300px;
-      background-repeat: no-repeat !important;
-      background-size: cover !important;
-      background-position: center 20% !important; }
-    .images .grid-item img {
-      display: block;
-      max-width: 100%;
-      min-height: 300px; }
-    .images .grid-item p {
-      position: absolute;
-      width: 100%;
-      font-size: 50px;
-      line-height: 350px;
-      background: rgba(0, 0, 0, 0.5);
-      bottom: 0;
-      color: #FFF;
-      text-align: center; }
-      .images .grid-item p:hover {
-        background: none;
-        color: #777; }
+    max-width: 310px;
+    min-height: 300px; }
+  .grid-item p {
+    position: absolute;
+    width: 100%;
+    font-size: 50px;
+    line-height: 350px;
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #FFF;
+    text-align: center; }
+    .grid-item p:hover {
+      background: none;
+      color: #777; }
+
+.grid-sizer, .grid-item {
+  width: 310px; }
+
+.grid-item-width2 {
+  width: 620px; }
 
 .search--block {
   padding-top: 158px;
@@ -416,6 +432,8 @@ footer {
     display: block; } }
 
 @media screen and (max-width: 990px) {
+  .wrapper {
+    max-width: 850px; }
   .col-med-1 {
     width: 100%; }
   .col-med-2 {
@@ -449,7 +467,7 @@ footer {
 
 @media screen and (max-width: 900px) {
   .wrapper {
-    max-width: 800px; } }
+    max-width: 750px; } }
 
 @media screen and (max-width: 790px) {
   .wrapper {
@@ -493,6 +511,22 @@ footer {
     .images .grid-item p {
       font-size: 40px;
       line-height: 340px; } }
+
+@media screen and (max-width: 710px) {
+  .wrapper {
+    max-width: 550px; }
+  .grid-item-width2 {
+    width: 520px; } }
+
+@media screen and (max-width: 680px) {
+  .wrapper {
+    max-width: 500px; } }
+
+@media screen and (max-width: 620px) {
+  .wrapper {
+    max-width: 480px; }
+  .grid-item-width2 {
+    width: 450px; } }
 
 @media screen and (max-width: 544px) {
   .wrapper {

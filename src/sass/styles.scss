@@ -114,6 +114,13 @@ $spancolors : #ff4e50, #1cd7ad, #ffa507, #4e73db;
 	h2.title {
 		padding-bottom: 35px;
 	}
+	a.profile {
+		display: inline-block;
+	}
+	a.profile, a.profile:visited, a.profile:hover {
+		text-decoration: none;
+		color: #000;
+	}
 	.partner--item {
 		text-align: center;
 		padding-bottom: 50px;
@@ -183,41 +190,38 @@ $spancolors : #ff4e50, #1cd7ad, #ffa507, #4e73db;
 	// 	border-radius: 5px;
 	// 	//padding: 5px;
 	// }
+}
+	.item {
+	  float: left;
+	  position: relative;
+
+	}
 	.grid {
 		&:after {
 		  content: '';
 		  display: block;
 		  clear: both;
 		}
-		&-sizer, &-item {
-			width: 33.333%;
-		}
-		&-item-width2 {
-			width: 66.666%;
-		}
 		&-item {
 			position: relative;
+	  		//transition-duration: 2s;
 			padding: 0;
 			overflow: hidden;
 			float: left;
 			border-radius: 10px;
-			// &:nth-child(6),
-			// &:nth-child(7) {
-			// 	width: 60.666%;
-			// 	img {
-			// 		min-height:250px;					
-			// 	}
-			// }
 			.img {
-				max-width: 100%;
-				min-height: 300px;
+				width: 310px;
+				height: 310px;
 				background-repeat: no-repeat !important;
 				background-size: cover !important;
 				background-position: center 20% !important;
 			}
+			&:nth-of-type(5) .img,
+			&:nth-of-type(6) .img {
+			 	width: 620px;}
 			img {
 	  			display: block;
-	  			max-width: 100%;
+	  			max-width: 310px;
 				min-height: 300px;
 			}
 			p {
@@ -238,11 +242,18 @@ $spancolors : #ff4e50, #1cd7ad, #ffa507, #4e73db;
 			}
 		}
 
+		&-sizer, &-item {
+			width: 310px;
+		}
+		&-item-width2 {
+			width: 620px;
+		}
+
 	}
 
 
 
-}
+// }
 
 
 @mixin placeholder {
