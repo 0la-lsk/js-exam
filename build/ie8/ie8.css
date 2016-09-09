@@ -27,33 +27,41 @@ a.btns {
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  }
+  border-radius: 50px; }
 
 a.btns-menu {
   color: #FFF;
+  border: 3px solid transparent;
   padding: 10px 15px; }
+  a.btns-menu:hover {
+    border-color: #fff; }
 
 a.redwhite {
   padding: 12px 20px;
-   }
+  border: 3px solid #ff4e50; }
+  a.redwhite:hover {
+    background: #fd5c5e; }
 
 a.red-btns {
+  background: #ff4e50;
   color: #fff; }
 
 a.white-btns {
+  background: none;
   color: #ff4e50; }
+  a.white-btns:hover {
+    color: #fff; }
+
+a.top--menu__active {
+  border: 3px solid #fff; }
 
 img {
 	border: none;
 }
 
 a.top--menu__active {  
-  	background: url(../img/ie8_btnn.png);
-  	width: 60px;
   }
 a.linkr {
-	background: url(../img/ie8_btnr.png);
-  	width: 185px;	
 }
 
 
@@ -288,11 +296,6 @@ h2.title {
       color: #666;
       width: 205px;
       margin: 0 auto; }
-a.linkw {
-	background: url(../img/ie8_btnw.png);
-	width: 152px;
-}
-
 
 #hideIE {
   display: none
@@ -305,8 +308,6 @@ a.linkw {
   padding-top: 40px;
   padding-bottom: 30px;
 }
-
-
   #mygrid2, #mygrid2:after {
   display: block;
   content: "";
@@ -408,12 +409,8 @@ a.linkw {
       padding: 15px;
       width: 240px; }
     .search--block form a {
-      padding: 12px 20px;
-      margin-left: 10px; 
-      background: url(../img/ie8_btnr2.png);
-      width: 120px;
-      height: 16px;
-    }
+      padding: 10px 22px;
+      margin-left: 10px; }
 
 footer {
   border-top: 5px solid #ff4e50;
