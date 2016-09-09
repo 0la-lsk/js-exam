@@ -15,11 +15,11 @@ function getClick (e){
 	e = e.target || e.srcElement;
 	if ((e.className).substr(e.className.length-4, e.className.length) === "prev") shift = -1;
 	else shift = 1;
-	console.log(shift);
 	var parent = (e.parentElement).parentElement;
 	var list = parent.children[1].children;
-	console.log("list=",list);
-	var curSlider, nextSlider, nextSliderN;
+	var curSlider;
+	var nextSlider;
+	var nextSliderN;
 	for (var i = 0; i < list.length; i++) {
 		if (list[i].className > '') {
 			curSlider = list[i];

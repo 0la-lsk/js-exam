@@ -20,10 +20,13 @@ function getClick (e){
 	console.log(shift);
 	var parent = (e.target.parentElement).parentElement;
 	var list = parent.children[1].children;
-	console.log("list=",list);
-	var curSlider, nextSlider, nextSliderN;
+	var curSlider;
+	var nextSlider;
+	var nextSliderN;
 	for (var i = 0; i < list.length; i++) {
-		if (list[i].classList.value > '') {
+		var n = list[i].className || list[i].classList.value;
+		console.log(n);
+		if (n > '') {
 			curSlider = list[i];
 			nextSliderN = i + shift;
 			if ( nextSliderN >= list.length) nextSliderN = 0;
@@ -31,8 +34,16 @@ function getClick (e){
 			nextSlider = list[nextSliderN];
 		}
 	};
+if ((window.navigator.userAgent).search('.NET')<=0) {
 	curSlider.classList.value = '';
 	nextSlider.classList.value = 'active-slider';
+	
+} else {
+ 	curSlider.className = '';
+	nextSlider.className = 'active-slider';	
+};
+
+
 }
 
 
